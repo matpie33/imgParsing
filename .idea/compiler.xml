@@ -7,8 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Application" />
+        <module name="imgParsing" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="imgParsing" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
