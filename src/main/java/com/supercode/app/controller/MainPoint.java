@@ -11,14 +11,22 @@ import javafx.scene.control.Button;
 import javafx.scene.image.PixelWriter;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.awt.*;
+import java.io.File;
 
 public class MainPoint extends Application {
+
+    private FileParser fileParser = new FileParser();
+
     @Override
     public void start(Stage stage) throws Exception {
         stage.show();
         Canvas canvas = new Canvas(300,300);
+        fileParser.parseFile();
 
         Group group = new Group();
         Scene scene = new Scene(group, 100, 100);
